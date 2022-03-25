@@ -1,0 +1,6 @@
+Read a text file using FileReader in Java:
+
+To read the contents of a text file, the idea is to create a new FileReader 
+and read the whole file character by character using Reader’s read() method,
+ as shown below. It returns the character read, or -1 if the end of the 
+ stream is reached, and throws an IOException if an I/O error occurs.

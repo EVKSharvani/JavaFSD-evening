@@ -1,0 +1,1 @@
+FileWriter class together with its write() method to write some text to the file.

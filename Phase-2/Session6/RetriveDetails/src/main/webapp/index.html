@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+h2 {text-align: center;}
+body {font-family: Arial, Helvetica, sans-serif;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:black;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+.container {
+  padding:16px;
+  
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h2> View all Products and its details</h2>
+<center><a href="fetch">View products</a></center>
+<br>
+<br>
+<h2> Enter Product Details to store in products table</h2>
+<form action="save" method="post">
+
+ Product Name: <input type="text" name="pname"><br><br>
+ Product Details: <input type="text" name="pdetails"><br><br>
+ Price: <input type="text" name="price"><br><br>
+ <input type="submit" value="save">
+</form>
+
+<br>
+<br>
+
+<h2> Enter Product Name to delete</h2>
+<form action="delete" method="post">
+ Product Name: <input type="text" name="pname"><br><br>
+ <input type="submit" value="Delete">
+</form>
+ <br><br>
+
+
+<h2> Enter product Name to retrive</h2>
+<form action="retrive" method="post">
+
+Product Name: <input type="text" name="pname"><br><br>
+ <input type="submit" value="Retrive">
+</form>
+
+<br>
+<br>
+
+ </div>
+</body>
+</html>

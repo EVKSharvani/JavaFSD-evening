@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.simplillearn">
+    	<class name="FlightFare" table="Flightfar">
+    		<id name="id" type="long" column="id">
+    			<generator class="identity"></generator>
+    		</id>
+    		<property name="fno" type="long" column="FNO"></property>
+    		<property name="efare" type="long" column="EFARE"></property>
+    		<property name="ffare" type="long" column="FFARE"></property>
+    		
+    		
+    	</class>
+    </hibernate-mapping>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+h2 {text-align: center;}
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;
+margin: auto; width: 50%;
+padding:10px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit],input[type=button] {
+  background-color:black;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<h2>Login Form</h2>
+<div class="login">    
+    <form action="logadmin"  method="post">    
+        <label><b>User Name</b></label>    
+        <input type="text" name="Uname"  placeholder="Username">    
+        <br><br>    
+        <label><b>Password</b></label>    
+        <input type="Password" name="Pass"  placeholder="Password">    
+        <br><br>    
+        <input type="button" onclick="window.location.href='update_pwd.html'" name="log2" id="log2" value="Update Password">
+        <input type="submit"  value="Login">    
+    </form>  
+       
+</div>   
+</body>
+</html>

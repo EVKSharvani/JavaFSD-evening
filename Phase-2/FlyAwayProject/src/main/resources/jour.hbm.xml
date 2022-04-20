@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping package="com.simplillearn">
+    	<class name="Journey1" table="jourdetails">
+    		<id name="id" type="long" column="ID">
+    			<generator class="identity"></generator>
+    		</id>
+    		<property name="user" type="long" column="USER"></property>
+    		<property name="froms" type="string" column="FROMS"></property>
+    		<property name="tos" type="string" column="TOS"></property>
+    		<property name="date" type="string" column="Date"></property>
+    		<property name="num" type="long" column="NUM"></property>
+    		
+    		
+    		
+    	</class>
+    </hibernate-mapping>

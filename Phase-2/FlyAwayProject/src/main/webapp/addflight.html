@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<style>
+h2 {text-align: center;}
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;
+margin: auto; width: 50%;
+padding:10px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit],input[type=button]{
+  background-color:black;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+button:hover {
+  opacity: 0.8;
+}
+select {
+ 
+  flex: 1;
+  padding: 0 1em;
+  
+  cursor: pointer;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  width: 40em;
+  height: 2em;
+  border-radius: .25em;
+  overflow: hidden;
+  padding:10px;
+}
+.check{
+padding:10px;}
+
+
+.select:hover::after {
+  opacity: 0.8;
+}
+</style>
+<body>
+<h2>Add New Flight</h2>
+<div class="login"> 
+    <form action="addfly"  method="post">  
+    
+        <label><b>Airline</b></label>    <br>
+        <div class="select">
+
+<select name="airline">
+ <option value="">NotChoosen</option>
+  <option value="airindia">AirIndia</option>
+  <option value="indigo">IndiGo</option>
+  <option value="spicejet">SpiceJet</option>
+  <option value="airindiaexpress">AirIndiaExpress</option>
+</select>  </div>  
+<br><br>
+<label><b>WeekDays</b></label> <br>
+ <div class="check">
+<input type="checkbox"  name="day" value="1">
+<label >Sunday</label>
+<input type="checkbox"  name="day" value="2">
+<label >Monday</label>
+<input type="checkbox"  name="day" value="3">
+<label >Tuesday</label>
+<input type="checkbox"  name="day" value="4">
+<label >Wednesday</label>
+<input type="checkbox"  name="day" value="5">
+<label >Thursday</label>
+<input type="checkbox"  name="day" value="6">
+<label >Friday</label>
+<input type="checkbox"  name="day" value="7">
+<label >Saturday</label></div>
+        <br><br> 
+        <label><b>Source</b></label>    <br>
+        <div class="select">
+        <select name="src">
+ <option value="">NotChoosen</option>
+  <option value="hyd">HYDERABAD|IN</option>
+  <option value="lucknow">LUCKNOW|IN</option>
+  <option value="mumbai">MUMBAI|IN</option>
+  <option value="kolkata">KOLKATA|IN</option>
+</select>  </div>
+        <br><br>
+        <label><b>Destination</b></label>  <br> 
+        <div class="select"> 
+         <select name="dest">
+ <option value="">NotChoosen</option>
+  <option value="hyd">HYDERABAD|IN</option>
+  <option value="lucknow">LUCKNOW|IN</option>
+  <option value="mumbai">MUMBAI|IN</option>
+  <option value="kolkata">KOLKATA|IN</option>
+</select>  
+        <br><br>     
+           
+        </div>
+       <input type="button" onclick="window.location.href='addfare.html'"value="Add Fare">
+        <input type="submit"  value="Add Flight">    
+    </form>  
+    </div>
+</body>
+</html>

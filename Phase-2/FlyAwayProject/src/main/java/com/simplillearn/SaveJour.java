@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.math.BigDecimal;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,7 +16,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
-import java.util.Date; 
+import java.util.Date;
+import java.util.List; 
 
 @WebServlet("/search")
 public class SaveJour extends HttpServlet {
@@ -48,7 +50,29 @@ Journey1 u=new Journey1();
 		Transaction tx=session.beginTransaction();
 		session.save(u);
 		tx.commit();
-				 out.print("Successfully!");
+		 response.setContentType("text/html");
+		 SessionFactory factory1= HibernateUtil1.getSessionFactory();
+		 Session session1= factory1.openSession();
+		 
+		 List<FlightDetails>list =session1.createQuery("from FlightDetails").list();
+		 
+		 
 		
+		 
+		
+		 
+		 for (FlightDetails p:list) {
+			 
+			 if((p.getSrc()).equals(src) && (p.getDes()).equals(des)) {
+			
+			 request.setAttribute("p", p);
+			 RequestDispatcher dispatcher = request.getServletContext()
+						.getRequestDispatcher("/avaflights.jsp");
+				dispatcher.forward(request, response);
+			
+			 }
+		 }
+		
+				 
 	}
 }

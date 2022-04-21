@@ -99,7 +99,7 @@ padding:10px;}
         <label><b>No Of Travellers</b></label>    
         <input type="text" name="tnum"  placeholder="Enter No of Travellers">    
         <br><br> 
-        <input type="button" onclick="window.location.href='bookflight.html'"value="Book Flight">
+       
         <input type="submit"  value="Search Flights">    
     </form>  
     </div>

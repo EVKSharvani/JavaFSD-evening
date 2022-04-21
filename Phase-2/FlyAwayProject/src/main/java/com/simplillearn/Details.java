@@ -14,43 +14,42 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.simplillearn.UserReg;
-import com.simplillearn.HibernateUtil;
+import com.simplillearn.FlightDetails;
+import com.simplillearn.HibernateUtil1;
 
 
 import java.util.List; 
 import javax.servlet.RequestDispatcher;
-@WebServlet("/loguser")
-public class LoginUser extends HttpServlet {
+@WebServlet("/detail")
+public class Details extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 String email=request.getParameter("Uname");
-		 String pwd=request.getParameter("Pass");
+		 String flight=request.getParameter("flight");
+		
 		 PrintWriter out= response.getWriter();
 		 
-		response.setContentType("text/html");
-		 SessionFactory factory= HibernateUtil.getSessionFactory();
-		 Session session= factory.openSession();
+		 response.setContentType("text/html");
+		 SessionFactory factory1= HibernateUtil1.getSessionFactory();
+		 Session session1= factory1.openSession();
 		 
-		 List<UserReg>list =session.createQuery("from UserReg").list();
+		 List<FlightDetails>list =session1.createQuery("from FlightDetails").list();
 		 
 		 
-		 for (UserReg p:list) {
+		
+		 
+		
+		 
+		 for (FlightDetails p:list) {
 			 
-			 if((p.getEmail()).equals(email) && (p.getPwd()).equals(pwd)) {
-			 out.print("Welcome "+p.getFname());
-			 request.setAttribute("User", p);
+			 if(p.getFno()==Long.parseLong(flight)) {
+			
+			 request.setAttribute("p", p);
 			 RequestDispatcher dispatcher = request.getServletContext()
-						.getRequestDispatcher("/search.jsp");
+						.getRequestDispatcher("/bookflight.jsp");
 				dispatcher.forward(request, response);
 			
 			 }
-			 else {
-				 out.print("Incorrect password or Username");
-			 }
-			
-			
 		 }
 	}
 

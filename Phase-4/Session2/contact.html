@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<style>
+h2 {text-align: center;}
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;
+margin: auto; width: 50%;
+padding:10px;
+}
+
+input[type=text], input[type=password] ,textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=submit],input[type=button] {
+  background-color:black;;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+</style>
+</head>
+<body>
+<h2>Contact Form</h2>
+<div class="login">    
+    <form action="logadmin"  method="post">    
+        <label><b>Name</b><a style="color:red;">*</a></label>    
+        <input type="text" name="Uname"  placeholder="Firstname"> 
+        <input type="text" name="Uname"  placeholder="Lastname">    
+        <br><br>    
+        <label><b>Job Title</b><a style="color:red;">*</a></label>    
+        <input type="text" name="Pass" >    
+        <br><br> 
+        <label><b>Restaurant</b></label>    
+        <input type="text" name="Pass" >    
+        <br><br>    
+        <label><b>E-mail</b><a style="color:red;">*</a></label>    
+        <input type="text" name="Pass" >    
+        <br><br> 
+        <label><b>Phone Number</b><a style="color:red;">*</a></label>    
+        <input type="text" name="Pass" >    
+        <br><br> 
+        <label><b>Message</b><a style="color:red;">*</a></label>  <br>  
+        <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>    
+        <br><br> 
+        
+        <input type="submit"  value="Submit">    
+    </form>  
+       
+</div>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   
+</body>
+</html>

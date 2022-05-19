@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<h1>Data Binding</h1>
+<h2>lets bind the data from source to view using interpolation</h2>
+<hr>
+<p>{{name}}</p>
+<h2>lets bind the data from source to view using Property binding:[] bind the value with attribute </h2>
+<hr>
+<a [href]="url">Connect to Google</a>
+<img [src]="imageUrl" style="width:10%;">
+<h3>Print JSON Array</h3>
+
+<table  class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Ratings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!--NgDirectives  eg: *ngFor-->
+        <tr *ngFor="let p of products">
+            <td [class.inStock]="true">{{p.name}}</td>
+            <td [style.font-weight]="we">{{p.price}}</td>
+            <td [class.inStock]="true">{{p.available}}</td>
+            <td [style.font-weight]="we">{{p.ratings}}</td>
+
+        </tr>
+    </tbody>
+</table>
+<div class="container">
+    <button class="btn btn-primary" (click)="show()">Show Div</button>
+
+    <div *ngIf="flag" style="background-color: yellowgreen;">
+        This is My Div and You have implemented Event Binding
+    </div>
+</div>
+
+
+</body>
+</html>

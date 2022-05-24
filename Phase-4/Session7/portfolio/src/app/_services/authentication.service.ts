@@ -8,6 +8,7 @@ import { config } from 'process';
 export class AuthenticationService {
     private currentUserSubject: BehaviorSubject<any>;
     public currentUser: Observable<any>;
+  login: any;
 
     constructor(private http: HttpClient) {
 

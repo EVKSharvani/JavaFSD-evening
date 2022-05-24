@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
+    register: any;
     constructor(private http: HttpClient) { }
 
    /* getAll() {
